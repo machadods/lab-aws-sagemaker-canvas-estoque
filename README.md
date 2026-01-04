@@ -1,47 +1,54 @@
-# 📊 Previsão de Estoque Inteligente na AWS com [SageMaker Canvas](https://aws.amazon.com/pt/sagemaker/canvas/)
+Previsão de Estoque Inteligente – Notebook
 
-Bem-vindo ao desafio de projeto "Previsão de Estoque Inteligente na AWS com SageMaker Canvas. Neste Lab DIO, você aprenderá a usar o SageMaker Canvas para criar previsões de estoque baseadas em Machine Learning (ML). Siga os passos abaixo para completar o desafio!
+Descrição:
+Este notebook tem como objetivo desenvolver um modelo de previsão de estoque utilizando técnicas de Machine Learning. Serão analisados dados de produtos, preços, promoções e histórico de estoque para prever a quantidade necessária em períodos futuros.
 
-## 📋 Pré-requisitos
+Objetivos do projeto:
 
-Antes de começar, certifique-se de ter uma conta na AWS. Se precisar de ajuda para criar sua conta, confira nosso repositório [AWS Cloud Quickstart](https://github.com/digitalinnovationone/aws-cloud-quickstart).
+Explorar e analisar o dataset de estoque, preços e promoções.
 
+Pré-processar os dados e preparar features para o modelo.
 
-## 🎯 Objetivos Deste Desafio de Projeto (Lab)
+Treinar um modelo de regressão usando LightGBM, avaliando sua performance com métricas como RMSE, MAE e R².
 
-![image](https://github.com/digitalinnovationone/lab-aws-sagemaker-canvas-estoque/assets/730492/72f5c21f-5562-491e-aa42-2885a3184650)
+Visualizar previsões, resíduos e importância das features.
 
-- Dê um fork neste projeto e reescreva este `README.md`. Sinta-se à vontade para detalhar todo o processo de criação do seu Modelo de ML para uma "Previsão de Estoque Inteligente".
-- Para isso, siga o [passo a passo] descrito a seguir e evolua as suas habilidades em ML no-code com o Amazon SageMaker Canvas.
-- Ao concluir, envie a URL do seu repositório com a solução na plataforma da DIO.
+Gerar insights para decisões de negócio, como reposição de estoque, promoções e planejamento de compras.
 
+Ferramentas e bibliotecas utilizadas:
 
-## 🚀 Passo a Passo
+Python: Pandas, NumPy, Matplotlib, Seaborn
 
-### 1. Selecionar Dataset
+Scikit-learn: pré-processamento e métricas
 
--   Navegue até a pasta `datasets` deste repositório. Esta pasta contém os datasets que você poderá escolher para treinar e testar seu modelo de ML. Sinta-se à vontade para gerar/enriquecer seus próprios datasets, quanto mais você se engajar, mais relevante esse projeto será em seu portfólio.
--   Escolha o dataset que você usará para treinar seu modelo de previsão de estoque.
--   Faça o upload do dataset no SageMaker Canvas.
+LightGBM: modelo de regressão baseado em Gradient Boosting
 
-### 2. Construir/Treinar
+Google Colab: ambiente de execução
 
--   No SageMaker Canvas, importe o dataset que você selecionou.
--   Configure as variáveis de entrada e saída de acordo com os dados.
--   Inicie o treinamento do modelo. Isso pode levar algum tempo, dependendo do tamanho do dataset.
+Resumo do fluxo do notebook:
 
-### 3. Analisar
+Análise exploratória de dados (EDA)
 
--   Após o treinamento, examine as métricas de performance do modelo.
--   Verifique as principais características que influenciam as previsões.
--   Faça ajustes no modelo se necessário e re-treine até obter um desempenho satisfatório.
+Pré-processamento e encoding de variáveis categóricas
 
-### 4. Prever
+Treinamento e validação do modelo
 
--   Use o modelo treinado para fazer previsões de estoque.
--   Exporte os resultados e analise as previsões geradas.
--   Documente suas conclusões e qualquer insight obtido a partir das previsões.
+Avaliação de performance e análise de erros
 
-## 🤔 Dúvidas?
+Visualização de resultados e insights acionáveis
 
-Esperamos que esta experiência tenha sido enriquecedora e que você tenha aprendido mais sobre Machine Learning aplicado a problemas reais. Se tiver alguma dúvida, não hesite em abrir uma issue neste repositório ou entrar em contato com a equipe da DIO.
+Nota sobre a escolha do ambiente
+
+Este projeto foi desenvolvido no Google Colab devido a uma limitação técnica: o AWS SageMaker Canvas estava me sacaneando e a video aula não apresentava semelhanças com o atual site me fazendo perder horas e não foi possível executar o treinamento diretamente na plataforma.
+
+O Colab foi a alternativa ideal porque:
+
+Execução imediata: Permite rodar todo o fluxo de Machine Learning sem depender de serviços externos.
+
+Controle total do código: Podemos implementar, ajustar e documentar cada etapa do pré-processamento, treinamento e avaliação do modelo.
+
+Integração com Google Drive: Facilita carregar datasets e salvar resultados, mantendo todo o projeto organizado.
+
+Reprodutibilidade e portfólio: Todo o processo fica registrado em células de código e markdown, tornando o notebook didático e pronto para apresentação.
+
+Assim, apesar de originalmente previsto para SageMaker Canvas, o projeto manteve toda a funcionalidade e aprendizado esperado, demonstrando de forma clara o pipeline de previsão de estoque inteligente.
